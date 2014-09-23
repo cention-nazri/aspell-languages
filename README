@@ -1,0 +1,26 @@
+Strategy:
+
+Aspell language pack tarballs can be downloaded from ftp.gnu.org.
+
+The tarball name follows the pattern:
+
+	aspell{ASPELL_VERSION}-{LANGUAGE_ID}-{VERSION}
+
+Assumption: The tarball content is prefixed with their names, for example:
+
+  $ tar tvf aspell-fr-0.50-3.tar.bz2
+  spell-fr-0.50-3/
+  spell-fr-0.50-3/doc/
+  spell-fr-0.50-3/doc/README
+  ...
+
+Based on the above we can
+
+1. Download the aspell language pack from ftp.gnu.org
+2. Extract them in a directory named aspell{ASPELL_VERSION-{LANGUAGE_ID}/
+3. Repeat step 1 when new language packs are available and git add the new files
+   for commit.
+
+All the steps above are automated by the file Makefile and get-extract-add.sh.
+
+To add or update tarballs, edit Makefile accordingly and run "make".
