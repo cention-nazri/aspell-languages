@@ -7,7 +7,7 @@ cwl_files = nb.cwl
 data_files = nb.dat
 doc_files = README COPYING Copyright
 extra_files = configure info Makefile.pre
-multi_files = bokmal.alias bokmål.alias nb.multi no.alias norsk.alias
+multi_files = bokmal.alias bokmÃ¥l.alias nb.multi no.alias norsk.alias
 rws_files = nb.rws
 
 
