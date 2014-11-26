@@ -13,6 +13,7 @@ tarballs += nb/aspell-nb-0.50.1-0.tar.bz2
 tarballs += nl/aspell-nl-0.50-2.tar.bz2
 tarballs += nn/aspell-nn-0.50.1-1.tar.bz2
 tarballs += pl/aspell6-pl-6.0_20061121-0.tar.bz2
+tarballs += ru/aspell6-ru-0.99f7-1.tar.bz2
 tarballs += sv/aspell-sv-0.51-0.tar.bz2
 
 all:
