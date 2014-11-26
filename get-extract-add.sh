@@ -28,18 +28,8 @@ if [ ! -f "$already_downloaded_marker" ]; then
 		echo "Neither curl nor wget are available to fetch $url"
 		exit 1
 	fi
+
+	mkdir "$dir"
+	tar -C "$dir" -xjf $tarball --strip-components=1
+	echo "Extracted from this file" >$already_downloaded_marker
 fi
-
-# We do the following so that deleted files will be removed and can be properly
-# recorded as such for the following git commit.
-if [ -d ./"$dir" ]; then
-	rm -rf "./$dir"
-fi
-mkdir "$dir"
-
-tar -C "$dir" -xjf $tarball --strip-components=1
-
-# Add a marker for where the content was added from
-echo "Extracted from this file" >$already_downloaded_marker
-
-git add -f "$dir"
